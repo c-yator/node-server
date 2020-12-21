@@ -1,41 +1,42 @@
 {
-  "name": "project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./lib/server.js",
-  "scripts": {
-    "start": "node server.js",
-    "client": "cd .. && cd client && npm start",
-    "server": "nodemon server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "concurrently": "^5.3.0",
-    "cookie-parser": "^1.4.5",
-    "cookie-session": "^1.4.0",
-    "cors": "^2.8.5",
-    "csurf": "^1.11.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-mongo-sanitize": "^2.0.0",
-    "express-validator": "^6.6.1",
-    "helmet": "^3.23.3",
-    "hpp": "^0.2.3",
-    "http-errors": "^1.8.0",
-    "joi": "^17.1.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.27",
-    "morgan": "^1.10.0",
-    "multer": "^1.4.2",
-    "redis": "^3.0.2",
-    "safe-regex": "^2.1.1",
-    "xss-clean": "^0.1.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.6"
-  }
+	"name": "project",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./lib/server.js",
+	"scripts": {
+		"start": "node server.js",
+		"client": "cd .. && cd client && npm start",
+		"server": "nodemon server.js",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"heroku-postbuild": "cd .. && cd client && npm install && npm run build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"concurrently": "^5.3.0",
+		"cookie-parser": "^1.4.5",
+		"cookie-session": "^1.4.0",
+		"cors": "^2.8.5",
+		"csurf": "^1.11.0",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-mongo-sanitize": "^2.0.0",
+		"express-validator": "^6.6.1",
+		"helmet": "^3.23.3",
+		"hpp": "^0.2.3",
+		"http-errors": "^1.8.0",
+		"joi": "^17.1.1",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.9.27",
+		"morgan": "^1.10.0",
+		"multer": "^1.4.2",
+		"redis": "^3.0.2",
+		"safe-regex": "^2.1.1",
+		"xss-clean": "^0.1.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.6"
+	}
 }
