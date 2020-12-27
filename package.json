@@ -7,8 +7,7 @@
 		"start": "node server.js",
 		"client": "cd .. && cd client && npm start",
 		"server": "nodemon server.js",
-		"dev": "concurrently \"npm run server\" \"npm run client\"",
-		"heroku-postbuild": "cd .. && cd client && npm install && npm run build"
+		"dev": "concurrently \"npm run server\" \"npm run client\""
 	},
 	"keywords": [],
 	"author": "",
