@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "./lib/server.js",
 	"scripts": {
-		"start": "node ./lib/server.js",
+		"start": "node server.js",
 		"client": "cd .. && cd client && npm start",
 		"server": "nodemon server.js",
 		"dev": "concurrently \"npm run server\" \"npm run client\"",
