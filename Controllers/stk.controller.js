@@ -2,9 +2,9 @@ const { default: axios } = require('axios');
 const createError = require('http-errors');
 const events = require('events');
 
-const setAuthHeader = require('../../Config/setAuthHeader');
+const setAuthHeader = require('../Config/setAuthHeader');
 const MobilePayment = require('../Models/MobilePayment.model');
-const getTimestamp = require('../../Config/getTimestamp');
+const getTimestamp = require('../Config/getTimestamp');
 
 const eventEmitter = new events.EventEmitter();
 

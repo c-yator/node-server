@@ -1,6 +1,5 @@
 require('dotenv').config();
 
-const path = require('path');
 const express = require('express');
 const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
@@ -25,9 +24,9 @@ app.use(helmet());
 app.disable('x-powered-by');
 
 //initialize db
-require('../Config/init_mongoDB')();
+require('./Config/init_mongoDB')();
 //initialize redis
-require('../Config/init_redis');
+require('./Config/init_redis');
 //routes
 const apiRouter = express.Router();
 app.use('/api', apiRouter);
@@ -40,11 +39,6 @@ app.use('/newsletter', require('./Routes/newsletter.routes'));
 app.use('/', (req, res) => {
 	res.send('node server home');
 });
-//serve static
-// app.use(express.static(path.join(__dirname, 'client/build')));
-// app.get('*', (req, res) => {
-// res.sendFile(path.join(__dirname + '/client/build/index.html'));
-// });
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

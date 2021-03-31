@@ -2,12 +2,13 @@
 	"name": "project",
 	"version": "1.0.0",
 	"engines": {
-		"node": "14.15.5"
+		"node": "14.x"
 	},
 	"description": "",
 	"main": "./lib/server.js",
 	"scripts": {
 		"start": "node server.js",
+		"client": "cd .. && cd client && npm start",
 		"server": "nodemon server.js",
 		"dev": "concurrently \"npm run server\" \"npm run client\""
 	},

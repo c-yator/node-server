@@ -1,19 +1,16 @@
 const createError = require('http-errors');
-const bcrypt = require('bcryptjs');
+
 const {
 	signAccessToken,
 	signRefreshToken,
 	verifyRefreshToken,
-} = require('../../Config/jwtConfig');
+} = require('../Config/jwtConfig');
 
 //model
 const User = require('../Models/User.model');
 //validation
-const {
-	loginSchema,
-	registerSchema,
-} = require('../../Config/validationSchema');
-const client = require('../../Config/init_redis');
+const { loginSchema, registerSchema } = require('../Config/validationSchema');
+const client = require('../Config/init_redis');
 
 module.exports = {
 	register: async (req, res, next) => {

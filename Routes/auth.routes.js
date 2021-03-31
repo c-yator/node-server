@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { verifyAccessToken } = require('../../Config/jwtConfig');
+const { verifyAccessToken } = require('../Config/jwtConfig');
 //controllers
 const {
 	register,

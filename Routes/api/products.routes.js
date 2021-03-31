@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { verifyAccessToken } = require('../../../Config/jwtConfig');
-const upload = require('../../../Config/multer');
+const { verifyAccessToken } = require('../../Config/jwtConfig');
+const upload = require('../../Config/multer');
 
 //controller
 const {
