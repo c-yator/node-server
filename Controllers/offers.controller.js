@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const createError = require('http-errors');
 
 //model
-const Offer = require('../Models/Offer.model');
+const { Offer } = require('../Models/Product.model');
 
 module.exports = {
 	getAllOffers: async (req, res, next) => {

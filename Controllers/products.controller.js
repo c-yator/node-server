@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const createError = require('http-errors');
 
 //model
-const Product = require('../Models/Product.model');
+const { Product } = require('../Models/Product.model');
 
 module.exports = {
 	getAllProducts: async (req, res, next) => {

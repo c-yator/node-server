@@ -5,8 +5,17 @@ const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const helmet = require('helmet');
+const cors = require('cors');
 
 const app = express();
+
+//cors
+
+app.use(
+	cors({
+		origin: 'https://5fe8922a69f90d3dfc7cd58b--yote-fresh.netlify.app',
+	})
+);
 
 //logger
 if (process.env.NODE_ENV === 'development') {
@@ -32,13 +41,12 @@ const apiRouter = express.Router();
 app.use('/api', apiRouter);
 apiRouter.use('/products', require('./Routes/api/products.routes'));
 apiRouter.use('/offers', require('./Routes/api/offers.routes'));
+apiRouter.use('/favorites', require('./Routes/api/favorites.routes'));
 apiRouter.use('/images', require('./Routes/api/images.routes'));
+apiRouter.use('/addresses', require('./Routes/api/addresses.routes'));
 app.use('/auth', require('./Routes/auth.routes'));
 app.use('/stk', require('./Routes/stk.routes'));
 app.use('/newsletter', require('./Routes/newsletter.routes'));
-app.use('/', (req, res) => {
-	res.send('node server home');
-});
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

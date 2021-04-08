@@ -9,7 +9,7 @@ const AddressSchema = mongoose.Schema({
 		type: String,
 		required: true,
 	},
-	phoneNumber: {
+	mobilePhoneNumber: {
 		type: Number,
 		required: true,
 	},
@@ -28,4 +28,4 @@ const AddressSchema = mongoose.Schema({
 	},
 });
 
-module.exports = AddressSchema;
+module.exports = mongoose.model('address', AddressSchema);

@@ -7,7 +7,7 @@ const OrderSchema = mongoose.Schema({
 		ref: 'user',
 	},
 	cart: {
-		type: Object,
+		type: Array,
 	},
 	paymentID: {
 		type: String,
