@@ -1,7 +1,7 @@
 const redis = require('redis');
 const client = redis.createClient({
-	port: 6379,
-	host: '192.168.1.122',
+	port: process.env.REDIS_POST,
+	host: process.env.REDIS_HOST,
 });
 client.on('connect', () => {
 	console.log('client connected to redis');
